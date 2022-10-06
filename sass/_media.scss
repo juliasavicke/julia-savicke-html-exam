@@ -20,4 +20,58 @@
     background-position: 500px 0px;
     background-size: 500px;
   }
+
+  // Companies
+  .companies {
+    .container {
+      .companies-container {
+        grid-template-columns: repeat(5, 1fr);
+        & > div {
+        }
+        & > div:nth-child(4) {
+          display: block;
+        }
+        .companies-container__image1 {
+          width: 216px;
+        }
+        .companies-container__image2 {
+          width: 154px;
+        }
+        .companies-container__image3 {
+          width: 132px;
+        }
+        .companies-container__image2 {
+          width: 194px;
+        }
+        .companies-container__image2 {
+          width: 156px;
+        }
+      }
+    }
+  }
+
+  // Auction
+  .auction {
+    .container {
+      .nfts-container {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // Footer
+  .footer {
+    .container {
+      padding-top: 64px;
+      .footer-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .right {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
 }
