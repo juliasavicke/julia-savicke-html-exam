@@ -27,10 +27,10 @@
 
 .hero {
   background: no-repeat url(../assets/assets/graphic.svg);
-  background-position: 180px -50px;
-  background-size: 450px;
+  background-position: 325px 110px;
+  background-size: 189px;
   .container {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
     .left {
       padding-top: 48px;
       width: 274px;
@@ -212,11 +212,16 @@
     height: 2px;
     background-color: v.$light-2;
   }
+  .divider2 {
+    width: 100%;
+    height: 2px;
+    background-color: v.$light-2;
+  }
   background: no-repeat url(../assets/assets/upsell-footer-image.svg);
   background-position: 253px 162px;
   background-size: 206px;
   .container {
-    margin-bottom: 80px;
+    padding-bottom: 66px;
     .left {
       padding-top: 48px;
       width: 207px;
@@ -254,7 +259,7 @@
 // Footer ==========
 .footer {
   .container {
-    padding-top: 120px;
+    padding-top: 64px;
     .footer-items {
       .left {
         &-desc {
