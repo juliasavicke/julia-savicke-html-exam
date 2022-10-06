@@ -1,11 +1,23 @@
 @media screen and (min-width: 1024px) {
+  // Common container
   .container {
     padding: 0 80px;
-    .burger {
-      display: none;
+  }
+  // Header
+  .header {
+    .container {
+      .burger {
+        display: none;
+      }
+      .nav {
+        display: none;
+      }
     }
-    .nav {
-      display: none;
-    }
+  }
+  // Hero
+  .hero {
+    background: no-repeat url(../assets/assets/graphic.svg);
+    background-position: 500px 0px;
+    background-size: 500px;
   }
 }
