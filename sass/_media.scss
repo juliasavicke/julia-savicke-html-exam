@@ -1,6 +1,11 @@
 @media screen and (min-width: 1024px) {
   .container {
     padding: 0 80px;
-    background-color: bisque;
+    .burger {
+      display: none;
+    }
+    .nav {
+      display: none;
+    }
   }
 }
