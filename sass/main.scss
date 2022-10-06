@@ -2,5 +2,23 @@
 @use "vars" as v;
 @use "common";
 
+// Header =======
+.header {
+  height: 100px;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .image {
+      height: 36px;
+    }
+    .burger {
+      height: 22px;
+      width: 24px;
+    }
+  }
+}
+
 // Responsive =========
 @import "media";

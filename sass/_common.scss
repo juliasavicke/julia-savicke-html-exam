@@ -1,1 +1,10 @@
 @use "vars" as v;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 32px;
+  background-color: aqua;
+}
