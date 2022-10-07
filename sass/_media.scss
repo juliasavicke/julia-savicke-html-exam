@@ -1,8 +1,9 @@
 @media screen and (min-width: 1440px) {
-  // Common container
+  // Common
   .container {
-    //width: 100%;
-    //padding: 0 80px;
+    margin: 0 80px;
+  }
+  .divider {
     margin: 0 80px;
   }
   // Header
@@ -47,6 +48,7 @@
         width: 50%;
         &__title {
           font-size: 96px;
+          //font-size: 6rem;
           font-weight: 900;
           line-height: 116.18px;
           margin-bottom: 32px;
@@ -56,9 +58,6 @@
         }
       }
     }
-    // background: no-repeat url(../assets/assets/graphic.svg);
-    // background-position: 500px 0px;
-    // background-size: 500px;
   }
 
   // Notice
@@ -106,6 +105,7 @@
 
   // Auction
   .auction {
+    margin-bottom: 120px;
     .container {
       .auction-title {
         margin-bottom: 24px;
@@ -124,10 +124,7 @@
   .launching {
     position: relative;
     padding-bottom: 0;
-    .divider {
-      margin-bottom: 120px;
-      margin-top: 120px;
-    }
+
     .launching-image {
       position: absolute;
       bottom: 0;
@@ -137,7 +134,7 @@
       padding-bottom: 120px;
       .left {
         width: 620px;
-        padding-top: 0;
+        padding-top: 120px;
         &__desc {
           margin-bottom: 40px;
         }
