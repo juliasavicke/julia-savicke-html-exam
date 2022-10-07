@@ -1,50 +1,92 @@
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   // Common container
   .container {
+    width: 100%;
     padding: 0 80px;
+    margin: 0 auto;
   }
   // Header
   .header {
+    height: 220px;
     .container {
       .burger {
         display: none;
       }
       .nav {
-        display: none;
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+        color: v.$dark-2;
+        font-size: 20px;
+        font-weight: 400;
+        li a {
+          text-decoration: none;
+        }
+        li:last-of-type {
+          color: v.$accent-color;
+        }
       }
     }
   }
   // Hero
   .hero {
-    background: no-repeat url(../assets/assets/graphic.svg);
-    background-position: 500px 0px;
-    background-size: 500px;
+    //max-width: 1440px;
+    overflow: hidden;
+    position: relative;
+    .hero-img {
+      position: absolute;
+      top: 0;
+      left: 850px;
+    }
+    .container {
+      padding-bottom: 200px;
+      .left {
+        padding-top: 86px;
+        width: 620px;
+        &__title {
+          font-size: 96px;
+          font-weight: 900;
+          line-height: 116.18px;
+          margin-bottom: 32px;
+        }
+        &_desc {
+          margin-bottom: 41px;
+        }
+      }
+    }
+    // background: no-repeat url(../assets/assets/graphic.svg);
+    // background-position: 500px 0px;
+    // background-size: 500px;
+  }
+
+  // Notice
+  .notice {
+    .container {
+      .notice-text {
+        padding-top: 154px;
+        padding-bottom: 64px;
+        &__title {
+          margin-bottom: 24px;
+        }
+      }
+    }
   }
 
   // Companies
   .companies {
     .container {
       .companies-container {
+        margin: 120px auto;
         grid-template-columns: repeat(5, 1fr);
-        & > div {
-        }
-        & > div:nth-child(4) {
+        gap: 106.55px;
+        .companies-container__image4 {
           display: block;
         }
         .companies-container__image1 {
-          width: 216px;
-        }
-        .companies-container__image2 {
-          width: 154px;
-        }
-        .companies-container__image3 {
-          width: 132px;
-        }
-        .companies-container__image2 {
-          width: 194px;
-        }
-        .companies-container__image2 {
-          width: 156px;
+          width: 220px;
+          img {
+            width: 100%;
+          }
         }
       }
     }
@@ -53,8 +95,40 @@
   // Auction
   .auction {
     .container {
+      .auction-title {
+        margin-bottom: 24px;
+      }
+      .auction-desc {
+        margin-bottom: 56px;
+      }
       .nfts-container {
         max-width: 100%;
+      }
+    }
+  }
+
+  // Launching
+
+  .launching {
+    position: relative;
+    padding-bottom: 0;
+    .divider {
+      margin-bottom: 120px;
+      margin-top: 120px;
+    }
+    .launching-image {
+      position: absolute;
+      bottom: 0;
+      left: 853px;
+    }
+    .container {
+      padding-bottom: 120px;
+      .left {
+        width: 620px;
+        padding-top: 0;
+        &__desc {
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -62,13 +136,20 @@
   // Footer
   .footer {
     .container {
-      padding-top: 64px;
+      padding-top: 120px;
       .footer-items {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         .right {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .footer-bottom {
+        margin-top: 59px;
+        margin-bottom: 71px;
+        &__right {
+          display: block;
         }
       }
     }

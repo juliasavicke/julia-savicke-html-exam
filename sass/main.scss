@@ -26,9 +26,17 @@
 // Hero ========
 
 .hero {
-  background: no-repeat url(../assets/assets/graphic.svg);
-  background-position: 325px 110px;
-  background-size: 189px;
+  // background: no-repeat url(../assets/assets/graphic.svg);
+  // background-position: 325px 110px;
+  // background-size: 189px;
+
+  position: relative;
+  .hero-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
   .container {
     padding-bottom: 80px;
     .left {
@@ -81,12 +89,14 @@
     .notice-text {
       padding: 122px 32px 32px 32px;
       &__title {
+        margin-bottom: 16px;
         color: v.$dark-1;
         font-size: 2.4rem;
         font-weight: 500;
         line-height: 48px;
       }
       &__desc {
+        margin-bottom: 0;
         color: v.$dark-1;
         font-size: 1.25rem;
         font-weight: 400;
@@ -105,32 +115,18 @@
       margin-bottom: 56px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 1.7rem;
       justify-content: center;
       align-items: center;
-      gap: 1.7rem;
-      & > div:nth-child(4) {
+      .companies-container__image4 {
         display: none;
       }
-      &__image1 {
-        background: no-repeat left center url(../assets/assets/companies/1.svg);
-        width: 137px;
-        height: 50px;
-      }
-      &__image2 {
-        background: no-repeat left center url(../assets/assets/companies/2.svg);
-        height: 50px;
-      }
-      &__image3 {
-        background: no-repeat left center url(../assets/assets/companies/3.svg);
-        height: 50px;
-      }
-      &__image4 {
-        background: no-repeat left center url(../assets/assets/companies/4.svg);
-        height: 50px;
-      }
-      &__image5 {
-        background: no-repeat left center url(../assets/assets/companies/5.svg);
-        height: 50px;
+      .companies-container__image1 {
+        overflow: hidden;
+        width: 140px;
+        img {
+          min-width: 220px;
+        }
       }
     }
   }
@@ -141,6 +137,23 @@
 .auction {
   overflow: hidden;
   .container {
+    .auction-title {
+      color: v.$dark-1;
+      margin-bottom: 16px;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+    .auction-desc {
+      color: v.$dark-2;
+      margin-bottom: 40px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 150%;
+      a {
+        text-decoration: underline;
+      }
+    }
     .nfts-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -153,7 +166,7 @@
         background-color: v.$light-2;
         border-radius: 16px;
         .nft-info {
-          padding: 2em;
+          padding: 1.5rem;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           &__series {
@@ -173,14 +186,24 @@
             color: v.$dark-1;
             font-size: 20px;
             font-weight: 500;
-            line-height: 100%;
-            margin-bottom: 1em;
+            line-height: 20px;
+            margin-bottom: 0.6em;
             text-transform: capitalize;
+            position: relative;
+            top: 5px;
           }
           &__price {
-            @extend .nft-info__title;
+            color: v.$dark-1;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 0.6em;
+            text-transform: capitalize;
             &::before {
               content: url("../assets/assets/eth.svg");
+              position: relative;
+              margin-right: 8px;
+              top: 5px;
             }
             text-transform: uppercase;
             text-align: right;
@@ -205,6 +228,14 @@
 // Launching soon =========
 
 .launching {
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  .launching-image {
+    position: absolute;
+    bottom: 0;
+    left: 253.52px;
+  }
   .divider {
     margin-top: 92px;
     margin-bottom: 64px;
@@ -217,9 +248,10 @@
     height: 2px;
     background-color: v.$light-2;
   }
-  background: no-repeat url(../assets/assets/upsell-footer-image.svg);
-  background-position: 253px 162px;
-  background-size: 206px;
+  // background: no-repeat url(../assets/assets/upsell-footer-image.svg);
+  // background-position: 253px 162px;
+  // background-size: 206px;
+
   .container {
     padding-bottom: 66px;
     .left {
@@ -264,12 +296,22 @@
       .left {
         &-desc {
           padding-top: 30px;
+          margin-bottom: 0;
           color: v.$dark-2;
           font-size: 20px;
           font-weight: 400;
         }
         &-image {
           width: 198px;
+        }
+        &-icons {
+          padding-top: 32px;
+          padding-bottom: 64px;
+          i {
+            color: v.$dark-4;
+            padding-right: 1rem;
+            font-size: 18px;
+          }
         }
       }
       .right {
@@ -331,7 +373,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      margin-top: 1.8em;
+      margin-top: 1.5em;
       margin-bottom: 5.25em;
       &__right {
         display: none;
