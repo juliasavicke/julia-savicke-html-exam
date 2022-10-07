@@ -1,9 +1,9 @@
 @media screen and (min-width: 1440px) {
   // Common container
   .container {
-    width: 100%;
-    padding: 0 80px;
-    margin: 0 auto;
+    //width: 100%;
+    //padding: 0 80px;
+    margin: 0 80px;
   }
   // Header
   .header {
@@ -61,7 +61,17 @@
 
   // Notice
   .notice {
+    background: white;
     .container {
+      background: rgb(255, 57, 152);
+      background: linear-gradient(
+        45deg,
+        rgba(255, 57, 152, 1) 0%,
+        rgba(255, 57, 57, 1) 17%,
+        rgba(255, 129, 57, 1) 80%,
+        rgba(57, 255, 160, 1) 100%
+      );
+      border-radius: 15px;
       .notice-text {
         padding-top: 154px;
         padding-bottom: 64px;
