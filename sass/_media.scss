@@ -124,11 +124,15 @@
   .launching {
     position: relative;
     padding-bottom: 0;
+    .divider-launch {
+      display: none;
+    }
 
     .launching-image {
       position: absolute;
       bottom: 0;
       left: 853px;
+      height: 85%;
     }
     .container {
       padding-bottom: 120px;
