@@ -2,5 +2,384 @@
 @use "vars" as v;
 @use "common";
 
+// Header =======
+.header {
+  height: 100px;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .image {
+      height: 36px;
+    }
+    .burger {
+      font-size: 24px;
+    }
+    .nav {
+      display: none;
+    }
+  }
+}
+
+// Hero ========
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  .hero-img {
+    min-height: 411px;
+    max-height: 568px;
+    position: absolute;
+    //left: 218px;
+    left: 50%;
+    top: -35px;
+    z-index: -1;
+  }
+
+  .container {
+    padding-bottom: 80px;
+    .left {
+      padding-top: 48px;
+      //width: 274px;
+      width: 76%;
+      //min-width: 274px;
+      max-width: 350px;
+      &__subtitle {
+        color: v.$accent-color;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        margin-bottom: 24px;
+      }
+      &__title {
+        color: v.$dark-1;
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 58px;
+        margin-bottom: 24px;
+      }
+      &__desc {
+        color: v.$dark-2;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: 32px;
+      }
+      &__btn {
+        background: transparent;
+        color: v.$dark-1;
+      }
+    }
+  }
+}
+
+// Notice ===========
+
+.notice {
+  background: rgb(255, 57, 152);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 57, 152, 1) 0%,
+    rgba(255, 57, 57, 1) 17%,
+    rgba(255, 129, 57, 1) 80%,
+    rgba(57, 255, 160, 1) 100%
+  );
+  .container {
+    .notice-text {
+      padding: 122px 32px 32px 32px;
+      &__title {
+        margin-bottom: 16px;
+        color: v.$dark-1;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 48px;
+      }
+      &__desc {
+        margin-bottom: 0;
+        color: v.$dark-1;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+// Companies ===========
+
+.companies {
+  .container {
+    .companies-container {
+      margin-top: 64px;
+      margin-bottom: 56px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.7rem;
+      justify-content: center;
+      align-items: center;
+      .companies-container__image4 {
+        display: none;
+      }
+      .companies-container__image1 {
+        overflow: hidden;
+        width: 140px;
+        img {
+          min-width: 220px;
+        }
+      }
+    }
+  }
+}
+
+// Auction =======
+
+.auction {
+  overflow: hidden;
+  margin-bottom: 92px;
+  .container {
+    .auction-title {
+      color: v.$dark-1;
+      margin-bottom: 16px;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+    .auction-desc {
+      color: v.$dark-2;
+      margin-bottom: 40px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 150%;
+      a {
+        text-decoration: underline;
+      }
+    }
+    .nfts-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      .nft-item {
+        min-height: 400px;
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        background-color: v.$light-2;
+        border-radius: 16px;
+        .nft-info {
+          padding: 1.5rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          &__series {
+            color: #ff8139;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 100%;
+            font-weight: 500;
+            margin-bottom: 1em;
+          }
+          &__bid {
+            @extend .nft-info__series;
+            color: v.$dark-3;
+            text-align: right;
+          }
+          &__title {
+            color: v.$dark-1;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 0.6em;
+            text-transform: capitalize;
+            position: relative;
+            top: 5px;
+          }
+          &__price {
+            color: v.$dark-1;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 0.6em;
+            text-transform: capitalize;
+            &::before {
+              content: url("../assets/assets/eth.svg");
+              position: relative;
+              margin-right: 8px;
+              top: 5px;
+            }
+            text-transform: uppercase;
+            text-align: right;
+          }
+          &__id {
+            color: v.$dark-3;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 100%;
+            margin-bottom: 0;
+          }
+          &__timer {
+            @extend .nft-info__id;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Launching soon =========
+
+.launching {
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+
+  .divider-launch {
+    width: 100%;
+    height: 2px;
+    background-color: v.$light-2;
+    position: absolute;
+    top: 47%;
+    left: 0;
+    z-index: -1;
+  }
+
+  .launching-image {
+    position: absolute;
+    bottom: 0;
+    left: 58%;
+    height: 80%;
+  }
+  .container {
+    padding-bottom: 66px;
+    .left {
+      padding-top: 64px;
+      //width: 207px;
+      width: 57%;
+      //min-width: 207px;
+      max-width: 350px;
+      &__subtitle {
+        color: v.$accent-color;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        margin-bottom: 24px;
+      }
+      &__title {
+        color: v.$dark-1;
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 58px;
+        margin-bottom: 24px;
+      }
+      &__desc {
+        color: v.$dark-2;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+// Footer ==========
+.footer {
+  .container {
+    padding-top: 64px;
+    .footer-items {
+      .left {
+        &-desc {
+          padding-top: 30px;
+          margin-bottom: 0;
+          color: v.$dark-2;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        &-image {
+          width: 198px;
+        }
+        &-icons {
+          padding-top: 32px;
+          padding-bottom: 64px;
+          i {
+            color: v.$dark-4;
+            padding-right: 1rem;
+            font-size: 18px;
+          }
+        }
+      }
+      .right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        &-about {
+          margin-bottom: 1.75em;
+          &__title {
+            margin-bottom: 23px;
+            color: v.$dark-2;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+          }
+          ul {
+            padding-left: 0;
+            li {
+              list-style-type: none;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              a {
+                text-decoration: none;
+                color: v.$dark-2;
+                font-size: 20px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        &-nft {
+          @extend .right-about;
+          &__title {
+            @extend .right-about__title;
+          }
+        }
+        &-contact {
+          @extend .right-about;
+          &__title {
+            @extend .right-about__title;
+          }
+        }
+        &-social {
+          @extend .right-about;
+          &__title {
+            @extend .right-about__title;
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      color: v.$dark-4;
+      font-size: 20px;
+      font-weight: 400;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5em;
+      margin-bottom: 5.25em;
+      &__right {
+        display: none;
+      }
+    }
+  }
+}
+
 // Responsive =========
 @import "media";
