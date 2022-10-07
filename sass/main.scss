@@ -31,17 +31,25 @@
   // background-size: 189px;
 
   position: relative;
+  overflow: hidden;
   .hero-img {
+    min-height: 411px;
+    max-height: 568px;
     position: absolute;
-    right: 0;
-    top: 0;
+    //left: 218px;
+    left: 50%;
+    top: -35px;
+    z-index: -1;
   }
 
   .container {
     padding-bottom: 80px;
     .left {
       padding-top: 48px;
-      width: 274px;
+      //width: 274px;
+      width: 76%;
+      //min-width: 274px;
+      max-width: 350px;
       &__subtitle {
         color: v.$accent-color;
         text-transform: uppercase;

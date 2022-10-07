@@ -34,15 +34,17 @@
     overflow: hidden;
     position: relative;
     .hero-img {
+      max-height: 768px;
       position: absolute;
-      top: 0;
-      left: 850px;
+      top: -30px;
+      left: 800px;
     }
     .container {
       padding-bottom: 200px;
       .left {
         padding-top: 86px;
-        width: 620px;
+        //width: 620px;
+        width: 50%;
         &__title {
           font-size: 96px;
           font-weight: 900;
